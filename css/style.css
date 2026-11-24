@@ -1,1 +1,289 @@
 
+/* =========================
+   ESTILS GENERALS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111111;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* =========================
+   CAPÇALERA
+========================= */
+
+header {
+    background-color: #1c4b7a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* =========================
+   MENU DE NAVEGACIO
+========================= */
+
+nav {
+    background-color: #123456;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f5c542;
+}
+
+/* =========================
+   CONTINGUT PRINCIPAL
+========================= */
+
+main {
+    background-color: #fff8e9;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+/* =========================
+   SECCIONS
+========================= */
+
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #e1d8c8;
+    text-align: center;
+}
+
+section h2 {
+    color: #164b82;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   SECCIO INICI
+========================= */
+
+#inici p {
+    margin: 15px 10px;
+    font-size: 16px;
+}
+
+.imatge-principal {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* =========================
+   HISTORIA, GASTRONOMIA
+   I ACTIVITATS
+========================= */
+
+.contingut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+}
+
+.contingut img {
+    width: 45%;
+    max-width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.contingut .text {
+    flex: 1;
+    font-size: 16px;
+}
+
+.contingut p {
+    margin-bottom: 15px;
+}
+
+.contingut ul {
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.contingut li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   GALERIA D'IMATGES
+========================= */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.04);
+}
+
+/* =========================
+   CURIOSITATS
+========================= */
+
+#curiositats {
+    border-bottom: none;
+}
+
+#curiositat {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+#boto-curiositat {
+    background-color: #1c4b7a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#boto-curiositat:hover {
+    background-color: #123456;
+}
+
+/* =========================
+   PEU DE PAGINA
+========================= */
+
+footer {
+    background-color: #123456;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    color: #f5c542;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   ADAPTACIO A MOBILS
+========================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 15px;
+        padding: 12px 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    main {
+        padding: 15px 8px;
+    }
+
+    section {
+        padding: 20px 7px;
+    }
+
+    section h2 {
+        font-size: 19px;
+    }
+
+    .contingut {
+        gap: 10px;
+    }
+
+    .contingut img {
+        width: 45%;
+        height: 170px;
+    }
+
+    .contingut .text {
+        font-size: 14px;
+    }
+
+    .contingut ul {
+        padding-left: 18px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .galeria img {
+        height: 100px;
+        border-radius: 12px;
+    }
+
+    .imatge-principal {
+        max-height: 300px;
+    }
+}
